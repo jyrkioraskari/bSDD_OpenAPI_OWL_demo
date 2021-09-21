@@ -12,98 +12,264 @@
 
 package de.rwth_aachen.dc.bsdd_owl.model;
 
+import java.util.Objects;
+import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.v3.oas.annotations.media.Schema;
+import java.io.IOException;
+/**
+ * DomainContractV2
+ */
 
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-09-21T11:35:32.475Z[GMT]")
 public class DomainContractV2 {
+  @SerializedName("namespaceUri")
   private String namespaceUri = null;
 
+  @SerializedName("name")
   private String name = null;
 
+  @SerializedName("version")
   private String version = null;
 
+  @SerializedName("organizationNameOwner")
   private String organizationNameOwner = null;
 
+  @SerializedName("defaultLanguageCode")
   private String defaultLanguageCode = null;
 
+  @SerializedName("license")
   private String license = null;
 
+  @SerializedName("licenseUrl")
   private String licenseUrl = null;
 
+  @SerializedName("qualityAssuranceProcedure")
   private String qualityAssuranceProcedure = null;
 
+  @SerializedName("qualityAssuranceProcedureUrl")
   private String qualityAssuranceProcedureUrl = null;
 
-public String getNamespaceUri() {
-	return namespaceUri;
-}
+  public DomainContractV2 namespaceUri(String namespaceUri) {
+    this.namespaceUri = namespaceUri;
+    return this;
+  }
 
-public void setNamespaceUri(String namespaceUri) {
-	this.namespaceUri = namespaceUri;
-}
+   /**
+   * Get namespaceUri
+   * @return namespaceUri
+  **/
+  @Schema(description = "")
+  public String getNamespaceUri() {
+    return namespaceUri;
+  }
 
-public String getName() {
-	return name;
-}
+  public void setNamespaceUri(String namespaceUri) {
+    this.namespaceUri = namespaceUri;
+  }
 
-public void setName(String name) {
-	this.name = name;
-}
+  public DomainContractV2 name(String name) {
+    this.name = name;
+    return this;
+  }
 
-public String getVersion() {
-	return version;
-}
+   /**
+   * Get name
+   * @return name
+  **/
+  @Schema(required = true, description = "")
+  public String getName() {
+    return name;
+  }
 
-public void setVersion(String version) {
-	this.version = version;
-}
+  public void setName(String name) {
+    this.name = name;
+  }
 
-public String getOrganizationNameOwner() {
-	return organizationNameOwner;
-}
+  public DomainContractV2 version(String version) {
+    this.version = version;
+    return this;
+  }
 
-public void setOrganizationNameOwner(String organizationNameOwner) {
-	this.organizationNameOwner = organizationNameOwner;
-}
+   /**
+   * Get version
+   * @return version
+  **/
+  @Schema(required = true, description = "")
+  public String getVersion() {
+    return version;
+  }
 
-public String getDefaultLanguageCode() {
-	return defaultLanguageCode;
-}
+  public void setVersion(String version) {
+    this.version = version;
+  }
 
-public void setDefaultLanguageCode(String defaultLanguageCode) {
-	this.defaultLanguageCode = defaultLanguageCode;
-}
+  public DomainContractV2 organizationNameOwner(String organizationNameOwner) {
+    this.organizationNameOwner = organizationNameOwner;
+    return this;
+  }
 
-public String getLicense() {
-	return license;
-}
+   /**
+   * Get organizationNameOwner
+   * @return organizationNameOwner
+  **/
+  @Schema(required = true, description = "")
+  public String getOrganizationNameOwner() {
+    return organizationNameOwner;
+  }
 
-public void setLicense(String license) {
-	this.license = license;
-}
+  public void setOrganizationNameOwner(String organizationNameOwner) {
+    this.organizationNameOwner = organizationNameOwner;
+  }
 
-public String getLicenseUrl() {
-	return licenseUrl;
-}
+  public DomainContractV2 defaultLanguageCode(String defaultLanguageCode) {
+    this.defaultLanguageCode = defaultLanguageCode;
+    return this;
+  }
 
-public void setLicenseUrl(String licenseUrl) {
-	this.licenseUrl = licenseUrl;
-}
+   /**
+   * Get defaultLanguageCode
+   * @return defaultLanguageCode
+  **/
+  @Schema(required = true, description = "")
+  public String getDefaultLanguageCode() {
+    return defaultLanguageCode;
+  }
 
-public String getQualityAssuranceProcedure() {
-	return qualityAssuranceProcedure;
-}
+  public void setDefaultLanguageCode(String defaultLanguageCode) {
+    this.defaultLanguageCode = defaultLanguageCode;
+  }
 
-public void setQualityAssuranceProcedure(String qualityAssuranceProcedure) {
-	this.qualityAssuranceProcedure = qualityAssuranceProcedure;
-}
+  public DomainContractV2 license(String license) {
+    this.license = license;
+    return this;
+  }
 
-public String getQualityAssuranceProcedureUrl() {
-	return qualityAssuranceProcedureUrl;
-}
+   /**
+   * Get license
+   * @return license
+  **/
+  @Schema(description = "")
+  public String getLicense() {
+    return license;
+  }
 
-public void setQualityAssuranceProcedureUrl(String qualityAssuranceProcedureUrl) {
-	this.qualityAssuranceProcedureUrl = qualityAssuranceProcedureUrl;
-}
+  public void setLicense(String license) {
+    this.license = license;
+  }
 
-  
+  public DomainContractV2 licenseUrl(String licenseUrl) {
+    this.licenseUrl = licenseUrl;
+    return this;
+  }
+
+   /**
+   * Get licenseUrl
+   * @return licenseUrl
+  **/
+  @Schema(description = "")
+  public String getLicenseUrl() {
+    return licenseUrl;
+  }
+
+  public void setLicenseUrl(String licenseUrl) {
+    this.licenseUrl = licenseUrl;
+  }
+
+  public DomainContractV2 qualityAssuranceProcedure(String qualityAssuranceProcedure) {
+    this.qualityAssuranceProcedure = qualityAssuranceProcedure;
+    return this;
+  }
+
+   /**
+   * Get qualityAssuranceProcedure
+   * @return qualityAssuranceProcedure
+  **/
+  @Schema(description = "")
+  public String getQualityAssuranceProcedure() {
+    return qualityAssuranceProcedure;
+  }
+
+  public void setQualityAssuranceProcedure(String qualityAssuranceProcedure) {
+    this.qualityAssuranceProcedure = qualityAssuranceProcedure;
+  }
+
+  public DomainContractV2 qualityAssuranceProcedureUrl(String qualityAssuranceProcedureUrl) {
+    this.qualityAssuranceProcedureUrl = qualityAssuranceProcedureUrl;
+    return this;
+  }
+
+   /**
+   * Get qualityAssuranceProcedureUrl
+   * @return qualityAssuranceProcedureUrl
+  **/
+  @Schema(description = "")
+  public String getQualityAssuranceProcedureUrl() {
+    return qualityAssuranceProcedureUrl;
+  }
+
+  public void setQualityAssuranceProcedureUrl(String qualityAssuranceProcedureUrl) {
+    this.qualityAssuranceProcedureUrl = qualityAssuranceProcedureUrl;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    DomainContractV2 domainContractV2 = (DomainContractV2) o;
+    return Objects.equals(this.namespaceUri, domainContractV2.namespaceUri) &&
+        Objects.equals(this.name, domainContractV2.name) &&
+        Objects.equals(this.version, domainContractV2.version) &&
+        Objects.equals(this.organizationNameOwner, domainContractV2.organizationNameOwner) &&
+        Objects.equals(this.defaultLanguageCode, domainContractV2.defaultLanguageCode) &&
+        Objects.equals(this.license, domainContractV2.license) &&
+        Objects.equals(this.licenseUrl, domainContractV2.licenseUrl) &&
+        Objects.equals(this.qualityAssuranceProcedure, domainContractV2.qualityAssuranceProcedure) &&
+        Objects.equals(this.qualityAssuranceProcedureUrl, domainContractV2.qualityAssuranceProcedureUrl);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(namespaceUri, name, version, organizationNameOwner, defaultLanguageCode, license, licenseUrl, qualityAssuranceProcedure, qualityAssuranceProcedureUrl);
+  }
+
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class DomainContractV2 {\n");
+    
+    sb.append("    namespaceUri: ").append(toIndentedString(namespaceUri)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("    organizationNameOwner: ").append(toIndentedString(organizationNameOwner)).append("\n");
+    sb.append("    defaultLanguageCode: ").append(toIndentedString(defaultLanguageCode)).append("\n");
+    sb.append("    license: ").append(toIndentedString(license)).append("\n");
+    sb.append("    licenseUrl: ").append(toIndentedString(licenseUrl)).append("\n");
+    sb.append("    qualityAssuranceProcedure: ").append(toIndentedString(qualityAssuranceProcedure)).append("\n");
+    sb.append("    qualityAssuranceProcedureUrl: ").append(toIndentedString(qualityAssuranceProcedureUrl)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
 
 }

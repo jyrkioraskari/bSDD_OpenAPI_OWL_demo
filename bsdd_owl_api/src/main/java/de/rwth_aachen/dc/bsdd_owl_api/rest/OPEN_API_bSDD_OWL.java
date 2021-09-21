@@ -31,11 +31,11 @@ public class OPEN_API_bSDD_OWL {
 		bsdd_server_api.getDomainClassificationsDetails(class_name.trim());
 		StringBuilder result_string = new StringBuilder();
 		Model m=bsdd_server_api.getOntology_model();
-		extractIfcOWLtoB4R(m, result_string, RDFFormat.TURTLE_PRETTY);
+		extractIfcOWL(m, result_string, RDFFormat.TURTLE_PRETTY);
 		return Response.ok(result_string.toString(), "text/turtle").build();
 	}
 	
-	private void extractIfcOWLtoB4R(Model m, StringBuilder result_string, RDFFormat rdfformat) {
+	private void extractIfcOWL(Model m, StringBuilder result_string, RDFFormat rdfformat) {
 
 		OutputStream ttl_output = new OutputStream() {
 			private StringBuilder string = new StringBuilder();
