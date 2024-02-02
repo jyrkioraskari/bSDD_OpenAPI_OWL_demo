@@ -43,9 +43,9 @@ public class RESTClient_bSDD {
 		//	System.out.println("Domain: "+d.getName()+" version: "+d.getVersion());
 		//getDomainClassifications("http://identifier.buildingsmart.org/uri/buildingsmart/ifc-4.3");
 		
-		getDomainClassificationsDetails("IfcDoor");
+		getDomainClassificationsDetails("IfcWindow");
 		ontology_model.write(System.out, "TTL");
-		System.out.println(stop-start);
+		//System.out.println(stop-start);
 	}
 
 	private SearchResultContractV2 getDomainClassifications(String domain_URI) {
@@ -65,8 +65,8 @@ public class RESTClient_bSDD {
 				domain.getClassifications().forEach(cl -> {
 					System.out.println(" - class: " + cl.getName());
 					// System.out.println(" - URI: "+cl.getNamespaceUri());
-					OntClass oc = ontology_model.createClass(this.bSDD_ns + cl.getName());
-					getDomainClassificationsDetails(oc, cl.getNamespaceUri());
+					//OntClass oc = ontology_model.createClass(this.bSDD_ns + cl.getName());
+					//getDomainClassificationsDetails(oc, cl.getNamespaceUri());
 
 				});
 			});
